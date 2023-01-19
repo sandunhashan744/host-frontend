@@ -1,10 +1,10 @@
 .glass{
     background: rgba(255, 255, 255, 0.55);
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 4px 30px #4747470b;
     backdrop-filter: blur(7.1px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    @apply bottom-4 border-gray-50 shrink-0 h-auto w-auto  rounded-3xl py-8 px-0 min-w-max 
+    @apply bottom-4 border-gray-50 shrink-0 h-auto w-auto rounded-3xl py-3 md:py-8 px-0 min-w-max 
 }
 
 .profile_img{
@@ -13,23 +13,23 @@
 }
 
 .login_img{
-    @apply  border-none w-[180px] h-[150px];
+    @apply  border-none w-[140px] md:w-[180px] h-[120px] md:h-[150px];
 }
 .register_img{
     @apply  border-none w-[200px] h-[170px];
 }
 
 .textbox{
-    @apply border-0 px-5 py-2 rounded-xl w-full shadow-sm text-base ;
+    @apply border-0 px-5 py-2 rounded-xl w-auto shadow-sm text-base ;
     @apply focus:outline-none;
 }
 .login_text{
-    @apply border-0 px-5 py-2 rounded-xl w-full shadow-sm text-base text-center;
+    @apply border-0 px-1 md:px-5 py-1 md:py-2 rounded-xl w-full shadow-sm text-sm md:text-base text-center;
     @apply focus:outline-none;
 }
 
 .btn{
-    @apply border bg-indigo-500 w-3/4 py-2 rounded-lg text-gray-50 text-lg shadow-sm text-center;
+    @apply border bg-indigo-500 w-3/4 py-1 md:py-2 rounded-lg text-gray-50 md:text-lg text-base shadow-sm text-center;
 }
 
 .btn:hover{
@@ -42,7 +42,7 @@ input[type='file']{
 
 input.input_error,
 select.input_error {
-    @apply border-red-600 border-2 px-5 py-2 rounded-xl w-full shadow-sm text-base ;
+    @apply border-red-600 border-2 px-1 md:px-5 py-1 md:py-2 rounded-xl w-full shadow-sm text-base ;
 }
 
 .error_msg{
@@ -52,4 +52,6 @@ select.input_error {
 .textbox_container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }

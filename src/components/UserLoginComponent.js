@@ -63,23 +63,27 @@ const UserLoginComponent = () => {
   })
 
   return (
-    <div className='container mx-auto items-center w-auto'>
+    <div className='container mx-auto '>
       {/* toast message */}
       <Toaster position='top-center' reverseOrder={false} />
+
       <div className='flex justify-center items-center h-screen'>
         <div className={styles.glass}>
           <div className='title flex flex-col items-center'>
-            <h4 className='text-3xl font-bold'>welcome</h4>
-            <span className='py-2 text-xl w-2/3 text-center text-slate-200'>
+            <h4 className='md:text-3xl text-xl font-bold'>welcome</h4>
+            <span className='py-1 md:py-2 text-base md:text-xl w-2/3 text-center text-slate-200'>
               Explore More by connecting with us.
             </span>
           </div>
 
-          <form className='py-0' autoComplete='off' onSubmit={handleSubmit}>
-            <div className='profile flex justify-center'>
+          <div className='profile flex justify-center my-0'>
               <img src={loginAvatar} className={styles.login_img} />
-            </div>
-            <div className='textbox flex flex-col items-center gap-4'>
+          </div>
+
+          <form className='py-0' autoComplete='off' onSubmit={handleSubmit}>
+            
+            <div className='textbox flex flex-col items-center gap-3 md:gap-5 my-3'>
+              
               <div className='w-3/4'> 
                 <input 
                   value={values.email}
@@ -111,7 +115,7 @@ const UserLoginComponent = () => {
 
             </div>
 
-            <div className='text-center py-3'>
+            <div className='text-center py-2 '>
               <span className='text-gray-900'>Not a Member :<span> </span>
                 <Link className='text-red-700 hover:font-bold ' to={"/register"}>Register Now</Link>
               </span>
@@ -119,9 +123,10 @@ const UserLoginComponent = () => {
 
           </form>
 
-          <div className='text-center -mt-6'>
-            <button onClick={handleClick} className='text-blue-700 hover:font-bold py-3'>Forget Password</button>
+          <div className='text-center -mt-2'>
+            <button onClick={handleClick} className='text-blue-700 hover:font-bold py-1'>Forget Password</button>
           </div> 
+
         </div>
       </div>
     </div>

@@ -65,8 +65,8 @@ const RecoveryComponent = () => {
       <div className='flex justify-center items-center h-screen'>
         <div className={styles.glass}>
           <div className='title flex flex-col items-center'>
-            <h4 className='text-3xl font-bold'>OTP Verification</h4>
-            <span className='py-2 text-xl w-2/3 text-center text-slate-200'>
+            <h4 className=' md:text-3xl text-xl font-bold'>OTP Verification</h4>
+            <span className='py-1 md:py-2 md:text-xl text-base w-2/3 text-center text-slate-200'>
               Enter OTP to Reset Your Password.
             </span>
           </div>
@@ -75,13 +75,14 @@ const RecoveryComponent = () => {
             <img src={OTPImg} className={styles.login_img} />
           </div>
 
-          <form className='pt-1' onSubmit={onSubmit} > 
+          <form className='py-0' onSubmit={onSubmit} > 
           {/* onSubmit={handleSubmit} */}
             <div className='input text-center'>
               <samp className='text-center text-m text-gray-700'>
-                Enter the 6 digit OTP </samp>
+                Enter the 6 digit OTP 
+              </samp>
                 
-              <div className='textbox flex flex-col items-center gap-6 py-4'>
+              <div className='textbox flex flex-col items-center gap-3 py-2'>
                 <div className='w-3/4'> 
                   <input 
                     onChange={(e) => setOTP(e.target.value) } 
@@ -97,7 +98,7 @@ const RecoveryComponent = () => {
             </div>
           </form>
 
-          <div className='text-center py-4'>
+          <div className='text-center py-2'>
               <span className='text-gray-900'>Can't Get OTP ?<span> </span>
                 <button onClick={resendOTP} className='text-cyan-900 hover:font-bold'>Re-send</button>
               </span>

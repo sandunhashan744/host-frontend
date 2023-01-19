@@ -41,8 +41,8 @@ const ResetComponent = () => {
       <div className='flex justify-center items-center h-screen'>
         <div className={styles.glass}>
           <div className='title flex flex-col items-center'>
-            <h4 className='text-3xl font-bold'>New Password</h4>
-            <span className='py-2 text-xl w-2/3 text-center text-slate-200'>
+            <h4 className='md:text-3xl text-xl font-bold'>New Password</h4>
+            <span className='md:py-3 py-1 md:text-xl text-lg w-2/3 text-center text-slate-200'>
               Enter Your New Password.
             </span>
           </div>
@@ -53,7 +53,7 @@ const ResetComponent = () => {
 
           <form className='py-0' onSubmit={formik.handleSubmit}>
             
-            <div className='textbox flex flex-col items-center gap-6'>
+            <div className='textbox flex flex-col items-center gap-3 md:gap-5 my-3'>
               
               <div className='w-3/4'>
                 <input 
