@@ -1,0 +1,55 @@
+.glass{
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px #4747470b;
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    @apply bottom-4 border-gray-50 shrink-0 h-auto w-auto  rounded-3xl py-8 px-0 min-w-max 
+}
+
+.profile_img{
+    @apply border-2 border-gray-100 w-[130px] h-[130px] rounded-full shadow-lg cursor-pointer;
+    @apply hover:border-gray-300;
+}
+
+.login_img{
+    @apply  border-none w-[180px] h-[150px];
+}
+.register_img{
+    @apply  border-none w-[200px] h-[170px];
+}
+
+.textbox{
+    @apply border-0 px-5 py-2 rounded-xl w-full shadow-sm text-base ;
+    @apply focus:outline-none;
+}
+.login_text{
+    @apply border-0 px-5 py-2 rounded-xl w-full shadow-sm text-base text-center;
+    @apply focus:outline-none;
+}
+
+.btn{
+    @apply border bg-indigo-500 w-3/4 py-2 rounded-lg text-gray-50 text-lg shadow-sm text-center;
+}
+
+.btn:hover{
+    @apply bg-indigo-700;
+}
+
+input[type='file']{
+    display: none;
+}
+
+input.input_error,
+select.input_error {
+    @apply border-red-600 border-2 px-5 py-2 rounded-xl w-full shadow-sm text-base ;
+}
+
+.error_msg{
+    @apply text-sm font-bold text-center text-red-600 my-1;
+}
+
+.textbox_container{
+    display: flex;
+    flex-direction: column;
+}
