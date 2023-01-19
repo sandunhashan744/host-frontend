@@ -13,14 +13,14 @@
 }
 
 .login_img{
-    @apply  border-none w-[140px] md:w-[180px] h-[120px] md:h-[150px];
+    @apply  border-none w-[140px] h-[120px] md:w-[180px] md:h-[150px];
 }
 .register_img{
-    @apply  border-none w-[200px] h-[170px];
+    @apply  border-none w-[140px] h-[110px] md:w-[200px] md:h-[170px];
 }
 
 .textbox{
-    @apply border-0 px-5 py-2 rounded-xl w-auto shadow-sm text-base ;
+    @apply border-0 px-1 md:px-5 py-1 md:py-2 md:rounded-xl rounded-lg w-full shadow-sm text-sm md:text-base ;
     @apply focus:outline-none;
 }
 .login_text{
@@ -50,8 +50,6 @@ select.input_error {
 }
 
 .textbox_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+    @apply border-0 px-5 py-2 rounded-xl w-auto shadow-sm text-base ;
+    @apply focus:outline-none;
 }

@@ -47,22 +47,22 @@ const RegisterComponent = () => {
       <div className='flex justify-center items-center h-screen'>
         <div className={styles.glass}>
           <div className='title flex flex-col items-center'>
-            <h4 className='text-3xl font-bold'>Register Here</h4>
-            <span className='py-2 mb-4 text-xl w-2/3 text-center text-slate-200'>
-              Happy to Join with us.
+            <h4 className='text-xl md:text-3xl font-bold'>Register Here</h4>
+            <span className='py-1 mb-2 md:text-xl text-base w-2/3 text-center text-slate-200'>
+               Happy to Join with us.
             </span>
           </div>
 
-          <form className='py-0' autoComplete='off' onSubmit={handleSubmit} >
-
-            <div className='profile flex justify-center'>
+          <div className='profile flex justify-center'>
               <img src={registerAvatar} className={styles.register_img}  />
-            </div>
-            
-            <div className='textbox flex flex-col items-center gap-4'>
+          </div>
 
-              <div className='flex w-3/4 gap-8'>
-                <div className={`${styles.textbox_container}` && 'flex flex-col'}>
+          <form className='py-0' autoComplete='off' onSubmit={handleSubmit} >
+            
+            <div className='textbox grid grid-col gap-2 md:text-center text-center px-2 md:px-4 '>
+
+              <div className='grid grid-cols md:grid-cols-2 gap-2'>
+                <div className={`${styles.textbox_container}` && ''}>
                     <input 
                       value={values.firstName}
                       onChange={handleChange}
@@ -75,7 +75,7 @@ const RegisterComponent = () => {
                     {errors.firstName && touched.firstName && <p className={styles.error_msg}>{errors.firstName}</p>}
                 </div>
 
-                <div className={`${styles.textbox_container}` && 'flex flex-col'}>
+                <div className={`${styles.textbox_container}` && ''}>
                   <input 
                     value={values.lastName} 
                     onChange={handleChange}
@@ -89,8 +89,8 @@ const RegisterComponent = () => {
                 </div>
               </div>
 
-              <div className='flex w-3/4 gap-8'>
-                <div className={`${styles.textbox_container}` && 'flex flex-col'}>
+              <div className='grid grid-cols md:grid-cols-2 md:gap-4 gap-2'>
+                <div className={`${styles.textbox_container}` && ''}>
                   <input
                     value={values.telegram} 
                     onChange={handleChange}
@@ -102,7 +102,7 @@ const RegisterComponent = () => {
                   />
                   {errors.telegram && touched.telegram && <p className={styles.error_msg}>{errors.telegram}</p>}
                 </div>
-                <div className={`${styles.textbox_container}` && 'flex flex-col'}>
+                <div className={`${styles.textbox_container}` && ''}>
                   <input 
                     value={values.metaTrade} 
                     onChange={handleChange}
@@ -116,7 +116,7 @@ const RegisterComponent = () => {
                 </div>
               </div>
 
-              <div className='w-3/4'>
+              <div className='w-auto md:w-full'>
                 <input 
                   value={values.email}
                   onChange={handleChange}
@@ -129,8 +129,8 @@ const RegisterComponent = () => {
               {errors.email && touched.email && <p className={styles.error_msg}>{errors.email}</p>}
               </div>
               
-              <div className='flex w-3/4 gap-8'>
-                <div className={`${styles.textbox_container}` && 'flex flex-col'}>
+              <div className='grid grid-cols md:grid-cols-2 md:gap-4 gap-2'>
+                <div className={`${styles.textbox_container}` && ''}>
                   <input 
                     value={values.password} 
                     onChange={handleChange}
@@ -142,7 +142,7 @@ const RegisterComponent = () => {
                   />
                   {errors.password && touched.password && <p className={styles.error_msg}>{errors.password}</p>}
                 </div>
-                <div className={`${styles.textbox_container}` && 'flex flex-col'}>
+                <div className={`${styles.textbox_container}` && ''}>
                   <input 
                     value={values.confirm_password} 
                     onChange={handleChange}
@@ -155,9 +155,11 @@ const RegisterComponent = () => {
                   {errors.confirm_password && touched.confirm_password && <p className={styles.error_msg}>{errors.confirm_password}</p>}
                 </div>
               </div>
-             
-              <button className={styles.btn} type="submit">Register</button>
 
+              <div>
+                <button className={styles.btn} type="submit">Register</button>
+              </div>
+              
             </div>
 
             <div className='text-center py-2'>
