@@ -62,7 +62,7 @@ const RegisterComponent = () => {
             <div className='textbox grid grid-col gap-2 md:text-center text-center px-2 md:px-4 '>
 
               <div className='grid grid-cols md:grid-cols-2 gap-2'>
-                <div className={`${styles.textbox_container}` && ''}>
+                <div className={styles.textbox_container}>
                     <input 
                       value={values.firstName}
                       onChange={handleChange}
@@ -75,7 +75,7 @@ const RegisterComponent = () => {
                     {errors.firstName && touched.firstName && <p className={styles.error_msg}>{errors.firstName}</p>}
                 </div>
 
-                <div className={`${styles.textbox_container}` && ''}>
+                <div className={styles.textbox_container}>
                   <input 
                     value={values.lastName} 
                     onChange={handleChange}
@@ -90,7 +90,7 @@ const RegisterComponent = () => {
               </div>
 
               <div className='grid grid-cols md:grid-cols-2 md:gap-4 gap-2'>
-                <div className={`${styles.textbox_container}` && ''}>
+                <div className={styles.textbox_container}>
                   <input
                     value={values.telegram} 
                     onChange={handleChange}
@@ -102,7 +102,7 @@ const RegisterComponent = () => {
                   />
                   {errors.telegram && touched.telegram && <p className={styles.error_msg}>{errors.telegram}</p>}
                 </div>
-                <div className={`${styles.textbox_container}` && ''}>
+                <div className={styles.textbox_container}>
                   <input 
                     value={values.metaTrade} 
                     onChange={handleChange}
@@ -116,7 +116,7 @@ const RegisterComponent = () => {
                 </div>
               </div>
 
-              <div className='w-auto md:w-full'>
+              <div className={styles.textbox_container}>
                 <input 
                   value={values.email}
                   onChange={handleChange}
@@ -130,7 +130,7 @@ const RegisterComponent = () => {
               </div>
               
               <div className='grid grid-cols md:grid-cols-2 md:gap-4 gap-2'>
-                <div className={`${styles.textbox_container}` && ''}>
+                <div className={styles.textbox_container}>
                   <input 
                     value={values.password} 
                     onChange={handleChange}
@@ -142,7 +142,7 @@ const RegisterComponent = () => {
                   />
                   {errors.password && touched.password && <p className={styles.error_msg}>{errors.password}</p>}
                 </div>
-                <div className={`${styles.textbox_container}` && ''}>
+                <div className={styles.textbox_container}>
                   <input 
                     value={values.confirm_password} 
                     onChange={handleChange}

@@ -50,6 +50,6 @@ select.input_error {
 }
 
 .textbox_container{
-    @apply border-0 px-5 py-2 rounded-xl w-auto shadow-sm text-base ;
+    @apply border-0 px-5 py-1 rounded-xl shadow-sm text-base ;
     @apply focus:outline-none;
 }
