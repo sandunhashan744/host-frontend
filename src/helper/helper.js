@@ -67,7 +67,7 @@ export async function registerUser(credentials){
 export async function login({email, password}){
     try {
         if(email){
-            const { data } = await axios.post('https://ttcuser-api.onrender.com/api/login', {email, password});
+            const { data } = await axios.post('/api/login', {email, password});
             return Promise.resolve({ data });
         }
     } catch (error) {
