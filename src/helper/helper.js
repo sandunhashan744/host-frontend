@@ -1,9 +1,6 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-<<<<<<< HEAD
 //axios.defaults.baseURL = 'https://ttcuser-api.onrender.com || http://localhost:8080 ';
-=======
->>>>>>> 4f06ab0f04b2c07c38c5cb9d0cb40e13d2339b56
 axios.defaults.baseURL = 'https://ttcuser-api.onrender.com';
 
 // *** Make a API Request ***
