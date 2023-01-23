@@ -1,11 +1,11 @@
-import axios from "axios";
+import axios from "./axios-config";
 import jwtDecode from "jwt-decode";
 
 // const axiosInstance = axios.create({
 //     baseURL: 'https://ttcuser-api.onrender.com'
 //   });
 //axios.defaults.baseURL = 'https://ttcuser-api.onrender.com || http://localhost:8080 ';
-axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
+//axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
 
 // *** Make a API Request ***
 
