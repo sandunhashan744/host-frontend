@@ -1,6 +1,7 @@
-import axios from "./axios-config";
+import MyApiClient from "./axios-config";
 import jwtDecode from "jwt-decode";
 
+const axios =new MyApiClient()
 // const axiosInstance = axios.create({
 //     baseURL: 'https://ttcuser-api.onrender.com'
 //   });
