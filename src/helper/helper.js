@@ -1,8 +1,8 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 //axios.defaults.baseURL = 'http://localhost:8080';
-axios.defaults.baseURL = 'https://ttcuser-api.onrender.com || http://localhost:8080 ';
-//axios.defaults.baseURL = 'https://ttcuser-api.onrender.com';
+// axios.defaults.baseURL = 'https://ttcuser-api.onrender.com || http://localhost:8080 ';
+axios.defaults.baseURL = 'https://ttcuser-api.onrender.com';
 
 // *** Make a API Request ***
 
@@ -76,8 +76,9 @@ export async function login({email, password}){
 export async function updateUser(response){
     try {
         const token = await localStorage.getItem('token');
+        console.log(response)
         const data = await axios.put('/api/updateUser', response, {headers : {"Authorization" : `Bearer ${token}`}});
-
+        
         return Promise.resolve({ data });
 
     } catch (error) {

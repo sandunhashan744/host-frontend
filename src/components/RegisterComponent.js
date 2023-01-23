@@ -102,6 +102,7 @@ const RegisterComponent = () => {
                   />
                   {errors.telegram && touched.telegram && <p className={styles.error_msg}>{errors.telegram}</p>}
                 </div>
+                
                 <div className={styles.textbox_container}>
                   <input 
                     value={values.metaTrade} 
@@ -155,11 +156,9 @@ const RegisterComponent = () => {
                   {errors.confirm_password && touched.confirm_password && <p className={styles.error_msg}>{errors.confirm_password}</p>}
                 </div>
               </div>
-
-              <div>
-                <button className={styles.btn} type="submit">Register</button>
-              </div>
-              
+ 
+              <button className={styles.btn} type="submit">Register</button>
+             
             </div>
 
             <div className='text-center py-2'>
