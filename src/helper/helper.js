@@ -1,7 +1,11 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+
+// const axiosInstance = axios.create({
+//     baseURL: 'https://ttcuser-api.onrender.com'
+//   });
 //axios.defaults.baseURL = 'https://ttcuser-api.onrender.com || http://localhost:8080 ';
-axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
+axios.defaults.baseURL = 'https://ttcuser-api.onrender.com/api/'
 
 // *** Make a API Request ***
 
@@ -27,7 +31,7 @@ export async function authenticate(email){
 // Get User deatails
 export async function getUser({email}){
     try {
-        const { data } = await axios.get(`/api/getUser/${email}`);
+        const { data } = await axios.get(`getUser/${email}`);
         //console.log(data)
         return {data};
 
