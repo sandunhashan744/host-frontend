@@ -1,6 +1,8 @@
-import axios from "axios";
+//import axios from "axios";
 import jwtDecode from "jwt-decode";
 import axiosInstance from './axios-url'
+
+const axios = axiosInstance;
 
 //axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
 //baseURL: process.env.REACT_APP_API_URL;
@@ -65,7 +67,7 @@ export async function registerUser(credentials){
 export async function login({email, password}){
     try {
         if(email){
-            const { data } = await axiosInstance.post('/api/login', {email, password});
+            const { data } = await axios.post('/api/login', {email, password});
             return Promise.resolve({ data });
         }
     } catch (error) {
