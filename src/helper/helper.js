@@ -1,7 +1,10 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+import dotenv from 'dotenv';
+dotenv.config()
 
-axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
+//axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
+baseURL: process.env.REACT_APP_API_URL;
 
 // *** Make a API Request ***
 
