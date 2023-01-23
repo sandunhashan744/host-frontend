@@ -1,12 +1,7 @@
-import MyApiClient from "./axios-config";
+import axios from "axios";
 import jwtDecode from "jwt-decode";
 
-const axios =new MyApiClient()
-// const axiosInstance = axios.create({
-//     baseURL: 'https://ttcuser-api.onrender.com'
-//   });
-//axios.defaults.baseURL = 'https://ttcuser-api.onrender.com || http://localhost:8080 ';
-//axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
+axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
 
 // *** Make a API Request ***
 
