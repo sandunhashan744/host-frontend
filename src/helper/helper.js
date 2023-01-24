@@ -32,7 +32,7 @@ export async function authenticate(email){
 export async function getUser({email}){
     try {
         const { data } = await axios.get(`/api/getUser/${email}`);
-        //console.log(data)
+        console.log(data)
         return {data};
 
     } catch (error) {
