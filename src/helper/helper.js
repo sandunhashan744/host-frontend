@@ -4,9 +4,6 @@ import axiosInstance from './axios-url'
 
 const axios = axiosInstance;
 
-//axios.defaults.baseURL = 'https://ttcuser-api.onrender.com'
-//baseURL: process.env.REACT_APP_API_URL;
-
 // *** Make a API Request ***
 
 //get userName from Token
@@ -30,9 +27,9 @@ export async function authenticate(email){
 
 // Get User deatails
 export async function getUser({email}){
+    console.log('data')
     try {
         const { data } = await axios.get(`/api/getUser/${email}`);
-        console.log(data)
         return {data};
 
     } catch (error) {
