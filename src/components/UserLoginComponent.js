@@ -48,6 +48,7 @@ const UserLoginComponent = () => {
     validationSchema: loginSchema,
     onSubmit : async values => {
       let loginPromise = login(values);
+      console.log(loginPromise)
       toast.promise(loginPromise,{
         loading : 'loading...',
         success : <b>Login Successful..🙂👍</b>,
