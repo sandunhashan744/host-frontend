@@ -1,8 +1,10 @@
-import axios from "axios";
+//import axios from "axios";
 import { useEffect, useState } from "react";
 import { getuserName } from '../helper/helper'
 
-axios.defaults.baseURL = 'http://localhost:8080';
+import axiosInstance from './axios-url'
+
+const axios = axiosInstance;
 
 
 /** custom hook */
