@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { getuserName } from '../helper/helper'
 
-import axiosInstance from './axios-url'
+import axiosInstance from '../helper/axios-url'
 
 const axios = axiosInstance;
 
