@@ -27,7 +27,7 @@ export async function authenticate(email){
 
 // Get User deatails
 export async function getUser({email}){
-    console.log('data')
+    
     try {
         const { data } = await axios.get(`/api/getUser/${email}`);
         return {data};

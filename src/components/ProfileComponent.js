@@ -67,11 +67,13 @@ const ProfileComponent = () => {
           <h4 className='text-xl font-bold text-center'>{apiData?.firstName+' '+apiData?.lastName || 'Profile'} </h4>
           <div className='profile grid justify-center '>
             <label htmlFor="profile">
-              <img src={file || apiData?.profile || avatar} className={styles.profile_img} alt="avatar" />
+              <img src={file || apiData?.profile || avatar} className={styles.profile_img} alt="avatar"/>
             </label>
             <input onChange={onUpload} type="file" id='profile' name='profile' />
           </div>
               
+
+          
             <form className='py-3 md:py-5' autoComplete='off' onSubmit={formik.handleSubmit}>
 
               <div className='text-center py-2'>
@@ -85,6 +87,17 @@ const ProfileComponent = () => {
                       name="firstName" 
                       placeholder='First Name' 
                     />
+                    
+
+          {/* <div className="flex items-center border-b border-gray-50 py-2">
+            <input className="appearance-none bg-transparent border-none text-black mr-3 py-1 px-2 leading-tight focus:outline-none text-center" 
+            type="text" 
+            placeholder="First Name" 
+            {...formik.getFieldProps('firstName')}
+            name="firstName" 
+            />
+          </div> */}
+
                   </div>
                   
                   <div className={styles.textbox_container}>

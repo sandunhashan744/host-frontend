@@ -74,8 +74,9 @@ const ResetComponent = () => {
                   placeholder='Confirm Password' 
                 />
               </div>
-
+              <div className='w-3/4'> 
               <button className={styles.btn} type="submit">Confirm</button>
+              </div>
             </div>
 
           </form>

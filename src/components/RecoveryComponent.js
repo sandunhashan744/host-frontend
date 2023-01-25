@@ -93,7 +93,9 @@ const RecoveryComponent = () => {
                     autoComplete='off'
                   />
                 </div>
-                <button className={styles.btn} type="submit">Recover</button>
+                <div className='w-3/4'> 
+                  <button className={styles.btn} type="submit">Recover</button>
+                </div>
               </div>
             </div>
           </form>
