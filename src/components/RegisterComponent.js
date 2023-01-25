@@ -24,18 +24,17 @@ const RegisterComponent = () => {
     validationSchema: registerSchema,
     onSubmit : async values => {  
       let registerPromise = registerUser(values);
-
       toast.promise(registerPromise, {
         loading : 'Creating...',
         success : <b>Register Successfully.🙂</b>,
         error : <b>Couldn't Register.😟</b>
       });
       registerPromise.catch(function(error){
-        
+        const err = (JSON.stringify(error.error.error));
+        toast.error(err)
+        //alert(JSON.stringify(error.error.error));
       })
-
       registerPromise.then(function(){ navigate('/')});
-
     }
   })
 

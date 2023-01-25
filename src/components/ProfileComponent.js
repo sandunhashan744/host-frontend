@@ -32,6 +32,8 @@ const ProfileComponent = () => {
       values = await Object.assign(values, {profile: apiData?.profile || file || ''})
       
       let udateUserPromise = updateUser(values);
+      console.log(udateUserPromise)
+      
       toast.promise(udateUserPromise,{
         loading : 'Updating...',
         success : <b>Update Successful..🙂👍</b>,
