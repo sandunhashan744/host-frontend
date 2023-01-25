@@ -53,15 +53,16 @@ const RegisterComponent = () => {
             </span>
           </div>
 
+          {/* Rgister Img */}
           <div className='profile flex justify-center'>
               <img src={registerAvatar} className={styles.register_img}  />
           </div>
 
           <form className='py-0' autoComplete='off' onSubmit={handleSubmit} >
             
-            <div className='textbox grid grid-col gap-2 md:text-center text-center px-2 md:px-4 '>
+            <div className='grid grid-col gap-2 md:text-center text-center px-0 md:px-3'>
 
-              <div className='grid grid-cols md:grid-cols-2 gap-2'>
+              <div className='grid grid-cols md:grid-cols-2 gap-2 '>
                 <div className={styles.textbox_container}>
                     <input 
                       value={values.firstName}
@@ -89,7 +90,7 @@ const RegisterComponent = () => {
                 </div>
               </div>
 
-              <div className='grid grid-cols md:grid-cols-2 md:gap-4 gap-2'>
+              <div className='grid grid-cols md:grid-cols-2 md:gap-1 gap-2 '>
                 <div className={styles.textbox_container}>
                   <input
                     value={values.telegram} 
@@ -117,20 +118,22 @@ const RegisterComponent = () => {
                 </div>
               </div>
 
-              <div className={styles.textbox_container}>
-                <input 
-                  value={values.email}
-                  onChange={handleChange}
-                  className={errors.email && touched.email ? `${styles.input_error}` : `${styles.textbox}`}  
-                  type="email" 
-                  id="email" 
-                  placeholder='Email'
-                  onBlur={handleBlur} 
-                />
-              {errors.email && touched.email && <p className={styles.error_msg}>{errors.email}</p>}
+              <div className='grid grid-cols gap-2 '>
+                <div className={styles.textbox_container}>
+                  <input 
+                    value={values.email}
+                    onChange={handleChange}
+                    className={errors.email && touched.email ? `${styles.input_error}` : `${styles.textbox}`}  
+                    type="email" 
+                    id="email" 
+                    placeholder='Email'
+                    onBlur={handleBlur} 
+                  />
+                {errors.email && touched.email && <p className={styles.error_msg}>{errors.email}</p>}
+                </div>
               </div>
               
-              <div className='grid grid-cols md:grid-cols-2 md:gap-4 gap-2'>
+              <div className='grid grid-cols md:grid-cols-2 md:gap-1 gap-2 '>
                 <div className={styles.textbox_container}>
                   <input 
                     value={values.password} 
@@ -157,7 +160,9 @@ const RegisterComponent = () => {
                 </div>
               </div>
  
-              <button className={styles.btn} type="submit">Register</button>
+              <div className={styles.textbox_container}>
+                <button className={styles.btnR} type="submit">Register</button>  
+               </div> 
              
             </div>
 

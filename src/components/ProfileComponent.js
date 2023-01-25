@@ -29,8 +29,8 @@ const ProfileComponent = () => {
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit : async values => {
-      values = await Object.assign(values, {profile: file || apiData?.profile || ''})
-      console.log(values)
+      values = await Object.assign(values, {profile: apiData?.profile || file || ''})
+      
       let udateUserPromise = updateUser(values);
       toast.promise(udateUserPromise,{
         loading : 'Updating...',
@@ -61,42 +61,80 @@ const ProfileComponent = () => {
       {/* toast message */}
       <Toaster position='top-center' reverseOrder={false} />
 
-      <div className='flex justify-center items-center h-screen'>
+      <div className='grid justify-center items-center h-screen'>
         <div className={styles.glass}>
-          <h4 className='text-3xl font-bold text-center'>{apiData?.firstName+' '+apiData?.lastName || 'Profile'} </h4>
-          <div className='profile flex justify-center py-2'>
+          
+          <h4 className='text-xl font-bold text-center'>{apiData?.firstName+' '+apiData?.lastName || 'Profile'} </h4>
+          <div className='profile grid justify-center '>
             <label htmlFor="profile">
               <img src={file || apiData?.profile || avatar} className={styles.profile_img} alt="avatar" />
             </label>
             <input onChange={onUpload} type="file" id='profile' name='profile' />
           </div>
               
-            <form className='py-1' onSubmit={formik.handleSubmit}>
+            <form className='py-3 md:py-5' autoComplete='off' onSubmit={formik.handleSubmit}>
 
-              <div className='textbox flex flex-col items-center gap-4'>
-                <div className='name flex w-3/4 gap-5'> 
-                  <input {...formik.getFieldProps('firstName')} className={styles.textbox} type="text" name="firstName" placeholder='First Name' />
-                  <input {...formik.getFieldProps('lastName')} className={styles.textbox} type="text" name="lastName" placeholder='Last Name' />
+              <div className='text-center py-2'>
+                
+                <div className='name grid grid-cols-1 md:grid-cols-2 md:gap-4'> 
+                  <div className={styles.textbox_container}>
+                    <input 
+                      {...formik.getFieldProps('firstName')} 
+                      className={styles.textbox} 
+                      type="text" 
+                      name="firstName" 
+                      placeholder='First Name' 
+                    />
+                  </div>
+                  
+                  <div className={styles.textbox_container}>
+                    <input 
+                      {...formik.getFieldProps('lastName')} 
+                      className={styles.textbox} 
+                      type="text" 
+                      name="lastName" 
+                      placeholder='Last Name' 
+                    />
+                  </div>
                 </div>
 
-                <div className='name flex w-3/4 gap-5'>
-                  <input {...formik.getFieldProps('telegram')} className={styles.textbox} type="number" name="telegram" placeholder='Telegram No' />
-                  <input {...formik.getFieldProps('metaTrade')} className={styles.textbox} type="text" name="metaTrade"  placeholder='Meta Trade No'/>
-                </div>
-
-                <div className='w-3/4'> 
-                  <input 
-                    autoComplete='off'
-                    {...formik.getFieldProps('email')} 
-                    className={styles.textbox} 
-                    type="email" 
-                    name="email" 
-                    placeholder='Email' 
-                  />
+                <div className='name grid grid-cols-1  md:grid-cols-2 md:gap-4'>
+                  <div className={styles.textbox_container}>
+                    <input 
+                      {...formik.getFieldProps('telegram')} 
+                      className={styles.textbox} 
+                      type="number" 
+                      name="telegram" 
+                      placeholder='Telegram No' 
+                    />
+                  </div>
+                  <div className={styles.textbox_container}>
+                    <input 
+                      {...formik.getFieldProps('metaTrade')} 
+                      className={styles.textbox} 
+                      type="text" 
+                      name="metaTrade"  
+                      placeholder='Meta Trade No'
+                    />
+                  </div>
                 </div>
                 
-                <button className={styles.btn} type="submit">Update</button>
-                
+                <div className='gap-4'> 
+                  <div className={styles.textbox_container}>
+                    <input 
+                      {...formik.getFieldProps('email')} 
+                      className={styles.textbox} 
+                      type="email" 
+                      name="email" 
+                      placeholder='Email' 
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.textbox_container}>
+                  <button className={styles.btnR} type="submit">Update</button>
+                </div>
+
               </div>
 
               <div className='text-center py-2'>

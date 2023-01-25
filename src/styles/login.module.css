@@ -8,7 +8,7 @@
 }
 
 .profile_img{
-    @apply border-2 border-gray-100 w-[130px] h-[130px] rounded-full shadow-lg cursor-pointer;
+    @apply border-2 border-gray-100 w-[80px] h-[80px] md:w-[130px] md:h-[120px] rounded-full shadow-lg cursor-pointer;
     @apply hover:border-gray-300;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .textbox{
-    @apply border-0 px-1 md:px-5 py-1 md:py-2 md:rounded-xl rounded-lg w-full shadow-sm text-sm md:text-base ;
+    @apply border-0 px-1 md:px-5 py-1 md:py-2 rounded-xl w-3/4 md:w-full shadow-sm text-sm md:text-base text-center md:text-left;
     @apply focus:outline-none;
 }
 .login_text{
@@ -29,10 +29,18 @@
 }
 
 .btn{
-    @apply border bg-indigo-500 w-3/4 py-1 md:py-2 rounded-lg text-gray-50 md:text-lg text-base shadow-sm text-center;
+    @apply border bg-indigo-500 w-full md:w-full items-center py-1 md:py-2 rounded-lg text-gray-50 md:text-lg text-base shadow-sm text-center;
 }
 
 .btn:hover{
+    @apply bg-indigo-700;
+}
+
+.btnR{
+    @apply border bg-indigo-500 w-3/4 md:w-full items-center py-1 md:py-2 rounded-lg text-gray-50 md:text-lg text-base shadow-sm text-center;
+}
+
+.btnR:hover{
     @apply bg-indigo-700;
 }
 
@@ -50,6 +58,6 @@ select.input_error {
 }
 
 .textbox_container{
-    @apply border-0 px-5 py-1 rounded-xl shadow-sm text-base ;
+    @apply border-0 px-4 py-1 rounded-xl shadow-sm text-base;
     @apply focus:outline-none;
 }

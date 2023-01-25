@@ -63,7 +63,7 @@ const UserLoginComponent = () => {
   })
 
   return (
-    <div className='container mx-auto '>
+    <div className='container mx-auto'>
       {/* toast message */}
       <Toaster position='top-center' reverseOrder={false} />
 
@@ -110,9 +110,9 @@ const UserLoginComponent = () => {
                 />
                 {errors.password && touched.password && <p className={styles.error_msg}>{errors.password}</p>}
               </div>
-
-              <button className={styles.btn} type="submit">Sign In</button>
-
+              <div className='w-3/4'> 
+                <button className={styles.btn} type="submit">Sign In</button>  
+              </div>
             </div>
 
             <div className='text-center py-2 '>
