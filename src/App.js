@@ -11,6 +11,9 @@ import PageNotFound from './components/PageNotFound'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+//new created Profile
+import NewProfile from './components/newProfile'
+
 // auth middleware 
 import {AuthorizeUser} from './middleware/auth-route'
 
@@ -35,6 +38,10 @@ const router =createBrowserRouter([
   {
     path:'/recovery',
     element:<RecoveryComponent/>
+  },
+  {
+    path:'/new',
+    element:<NewProfile/>
   },
   {
     path:'*',

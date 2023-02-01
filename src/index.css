@@ -10,6 +10,6 @@
 
 body{
   background: #dcdce6;
-  background-image: url('./assets/bg/bg4.png');
+  background-image: url('../src/assets/bg/bg4.png');
   background-size:cover ;
 }

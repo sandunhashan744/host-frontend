@@ -57,7 +57,8 @@ const UserLoginComponent = () => {
       loginPromise.then(res => {
         let {token} = res.data;
         localStorage.setItem('token', token);
-        navigate('/profile')
+        navigate('/new')
+        //navigate('/profile')
       });
     }
   })

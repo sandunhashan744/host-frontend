@@ -1,0 +1,40 @@
+.dark{
+    border-radius: 8px;
+    box-shadow: 0 4px 30px #5e5c5cef;
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(245, 244, 244, 0);
+    @apply bottom-4 bg-slate-800 text-white border-gray-50 shrink-0 h-auto w-auto rounded-3xl py-3 md:py-8 px-0 min-w-max 
+}
+
+.titel{
+    @apply font-bold text-lg md:text-2xl text-center my-2
+}
+
+
+.pro_lgoutbtn{
+    @apply border bg-red-500 w-2/3  md:w-full py-1 my-3 rounded-xl text-gray-50  text-base;
+}
+
+.pro_lgoutbtn:hover{
+    @apply bg-red-700;
+}
+
+.pro_btn{
+    @apply border bg-indigo-600 w-3/4  md:w-full  py-1 md:py-2 my-3 rounded-xl text-gray-50 md:text-lg text-base;
+}
+.pro_btn:hover{
+    @apply bg-indigo-800;
+}
+
+.textbox{
+    @apply bg-transparent border-0 border-b-2 border-gray-300 appearance-none  py-1 mt-5 md:py-2  w-3/5 md:w-full shadow-sm text-sm md:text-base ;
+    @apply focus:outline-none ;
+}
+
+.light_lbl{
+    @apply absolute text-base  text-gray-900 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] 
+}
+
+.dark_lbl{
+    @apply absolute text-base  text-gray-300 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] 
+}

@@ -90,16 +90,6 @@ const ProfileComponent = () => {
                       placeholder='First Name' 
                     />
                     
-
-          {/* <div className="flex items-center border-b border-gray-50 py-2">
-            <input className="appearance-none bg-transparent border-none text-black mr-3 py-1 px-2 leading-tight focus:outline-none text-center" 
-            type="text" 
-            placeholder="First Name" 
-            {...formik.getFieldProps('firstName')}
-            name="firstName" 
-            />
-          </div> */}
-
                   </div>
                   
                   <div className={styles.textbox_container}>

@@ -19,10 +19,10 @@
     @apply  border-none w-[140px] h-[110px] md:w-[200px] md:h-[170px];
 }
 
-.textbox{
-    @apply border-0 px-1 md:px-5 py-1 md:py-2 rounded-xl w-3/4 md:w-full shadow-sm text-sm md:text-base text-center md:text-left;
-    @apply focus:outline-none;
-}
+    .textbox{
+        @apply border-0 px-1 md:px-5 py-1 md:py-2 rounded-xl w-3/4 md:w-full shadow-sm text-sm md:text-base text-center md:text-left;
+        @apply focus:outline-none;
+    }
 .login_text{
     @apply border-0 px-1 md:px-5 py-1 md:py-2 rounded-xl w-full shadow-sm text-sm md:text-base text-center;
     @apply focus:outline-none;
