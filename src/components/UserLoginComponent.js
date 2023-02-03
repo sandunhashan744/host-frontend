@@ -40,6 +40,19 @@ const UserLoginComponent = () => {
     }
   };
 
+  //registation userbility
+  const useEmailforRegist = () => {
+    localStorage.removeItem('email')
+    const email = inputRef.current.value
+    if(!email){
+       let emp_email = '';
+       localStorage.setItem('email', emp_email);
+    }else{
+      localStorage.setItem('email', email);
+      
+    }
+  }
+
   const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
     initialValues : {
       email : '',
@@ -111,6 +124,7 @@ const UserLoginComponent = () => {
                 />
                 {errors.password && touched.password && <p className={styles.error_msg}>{errors.password}</p>}
               </div>
+
               <div className='w-3/4'> 
                 <button className={styles.btn} type="submit">Sign In</button>  
               </div>
@@ -118,7 +132,7 @@ const UserLoginComponent = () => {
 
             <div className='text-center py-2 '>
               <span className='text-gray-900'>Not a Member :<span> </span>
-                <Link className='text-red-700 hover:font-bold ' to={"/register"}>Register Now</Link>
+                <Link className='text-red-700 hover:font-bold ' onClick={useEmailforRegist} to="/register">Register Now</Link>
               </span>
             </div>
 

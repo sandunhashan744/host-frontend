@@ -11,13 +11,17 @@ const RegisterComponent = () => {
 
   const navigate = useNavigate();
 
+  //check the customer email
+  let Email = localStorage.getItem('email')
+  
+
   const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
     initialValues : {
       firstName : '',
       lastName : '',
       telegram : '',
       metaTrade : '',
-      email : '',
+      email : Email || '',
       password : '',
       confirm_password : ''
     },
