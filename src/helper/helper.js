@@ -1,7 +1,7 @@
-//import axios from "axios";
 import jwtDecode from "jwt-decode";
 import axiosInstance from './axios-url'
 
+//Rename the axiosInstance As axios
 const axios = axiosInstance;
 
 // *** Make a API Request ***
@@ -77,7 +77,7 @@ export async function login({email, password}){
 export async function updateUser(response){
     try {
         const token = await localStorage.getItem('token');
-        console.log(response)
+       // console.log(response)
         const data = await axios.put('/api/updateUser', response, {headers : {"Authorization" : `Bearer ${token}`}});
         
         return Promise.resolve({ data });

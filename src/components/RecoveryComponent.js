@@ -75,7 +75,7 @@ const RecoveryComponent = () => {
             <img src={OTPImg} className={styles.login_img} />
           </div>
 
-          <form className='py-0' onSubmit={onSubmit} > 
+          <form className='py-0' onSubmit={onSubmit} autoComplete='off' > 
           {/* onSubmit={handleSubmit} */}
             <div className='input text-center'>
               <samp className='text-center text-m text-gray-700'>
